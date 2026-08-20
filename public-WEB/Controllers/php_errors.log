@@ -1,0 +1,11 @@
+[03-Sep-2025 19:21:19 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to undefined method Usuario::obtenerTodos() in C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php:29
+Stack trace:
+#0 {main}
+  thrown in C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php on line 29
+[03-Sep-2025 19:25:04 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to undefined method Usuario::obtenerTodos() in C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php:29
+Stack trace:
+#0 {main}
+  thrown in C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php on line 29
+[04-Sep-2025 07:27:23 America/Montevideo] PHP Notice:  session_start(): ps_files_cleanup_dir: opendir(C:\Windows\Temp) failed: No such file or directory (2) in C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php on line 15
+[04-Sep-2025 07:27:23 America/Montevideo] PHP Warning:  session_start(): Session cache limiter cannot be sent after headers have already been sent (output started at C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php:15) in C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php on line 15
+[04-Sep-2025 07:27:23 America/Montevideo] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php:15) in C:\Apache24\htdocs\Proyecto-Tecnicatura\Los-Cosmicos\Sistema_de_Gestión_de_Laboratorios\public-WEB\Controllers\usuariosController.php on line 19

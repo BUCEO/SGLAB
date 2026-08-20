@@ -1,0 +1,39 @@
+.laboratorio-card {
+    border-left: 4px solid #0d6efd;
+    transition: all 0.3s ease;
+}
+
+.laboratorio-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.estado-badge {
+    font-size: 0.85rem;
+    padding: 0.35em 0.65em;
+}
+
+.equipo-row {
+    transition: background-color 0.2s ease;
+}
+
+.equipo-row:hover {
+    background-color: #f8f9fa;
+}
+
+.comentario-form {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.stats-card {
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.stats-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+}

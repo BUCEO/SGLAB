@@ -1,0 +1,119 @@
+/* Estilos globales */
+body {
+    background-color: #A0C0E0; /* Un azul suave similar al de la imagen */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Asegura que no haya márgenes extra */
+}
+.custom-back-btn {
+    background-color: #D0D0D0; /* Gris un poco más oscuro */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #A0A0A0; /* Borde suave */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 8px 15px; /* Padding ajustado */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    margin-left: 15px; /* Espacio desde el borde izquierdo */
+    min-width: 80px; /* Ancho mínimo para que no se vea muy pequeño */
+}
+/* Estilos para el encabezado de la página */
+.page-header {
+    background-color: rgba(192, 192, 192, 0.7); /* Gris claro semitransparente para el encabezado */
+    padding: 10px 0;
+    margin-bottom: 30px; /* Espacio debajo del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.page-header h1 {
+    font-size: 2em;
+    color: #333; /* Texto oscuro para el título */
+}
+
+.page-title-text {
+    font-weight: bold; /* Hacer el título del encabezado en negrita */
+}
+
+/* Estilo para el botón Volver */
+.custom-back-btn {
+    background-color: #D0D0D0; /* Gris un poco más oscuro */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #A0A0A0; /* Borde suave */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 8px 15px; /* Padding ajustado */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    margin-left: 15px; /* Espacio desde el borde izquierdo */
+    min-width: 80px; /* Ancho mínimo para que no se vea muy pequeño */
+}
+
+.custom-back-btn:hover {
+    background-color: #C0C0C0;
+    border-color: #909090;
+    color: #333;
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente para el formulario */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    width: 90%; /* Ancho en pantallas pequeñas */
+    max-width: 380px; /* Ancho máximo para pantallas más grandes */
+    display: flex; /* Usamos flexbox para centrar los elementos verticalmente dentro del contenedor */
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    align-items: center; /* Centramos horizontalmente los elementos */
+}
+
+/* Estilo para el icono de computadora */
+.add-equipo-icon {
+    width: 100px; /* Ajusta el tamaño del icono */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 25px; /* Espacio entre el icono y el label */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para el input de cantidad (number input) */
+.custom-number-input {
+    background-color: #E0E0E0; /* Gris claro para el fondo */
+    border: 1px solid #B0B0B0; /* Borde más suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 8px 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    width: 100%; /* Ocupa el 100% del ancho de su contenedor */
+    max-width: 180px; /* Limita el ancho máximo del input */
+    text-align: center; /* Centra el texto del número */
+    display: block; /* Asegura que se comporte como bloque para centrar con margin auto */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para el botón "Agregar" */
+.custom-add-btn {
+    background-color: #D0D0D0; /* Gris un poco más oscuro para el botón */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #A0A0A0; /* Borde suave */
+    border-radius: 20px; /* Bordes redondeados como en la imagen */
+    padding: 10px 30px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ocupa el 100% del ancho de su contenedor */
+    max-width: 200px; /* Ancho máximo para el botón */
+    margin-top: 30px; /* Espacio superior para separar del input */
+}
+
+.custom-add-btn:hover {
+    background-color: #C0C0C0; /* Gris más claro al pasar el ratón */
+    border-color: #909090;
+}
+
+.footer-logo {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen del footer */
+    height: auto; /* Mantiene la proporción de la imagen */
+}

@@ -1,0 +1,89 @@
+# =====================================================
+# Docker Compose - Sistema de Gestión de Laboratorios
+# =====================================================
+
+version: '3.8'
+
+services:
+  # ===================================================
+  # Servicio Web: Apache + PHP 8.3
+  # ===================================================
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sglab_web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./:/var/www/html
+      - ./docker/php.ini:/usr/local/etc/php/conf.d/custom.ini
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+      - PHP_MEMORY_LIMIT=256M
+      - PHP_UPLOAD_MAX_FILESIZE=10M
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - sglab_network
+
+  # ===================================================
+  # Servicio Base de Datos: MySQL 8.0
+  # ===================================================
+  db:
+    image: mysql:8.0
+    container_name: sglab_db
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_123
+      MYSQL_DATABASE: bddsglab6
+      MYSQL_USER: sgapp_admin
+      MYSQL_PASSWORD: AdministradorITI!
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./BaseDatos.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./docker/init-db.sh:/docker-entrypoint-initdb.d/02-init.sh
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot_password_123"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - sglab_network
+
+  # ===================================================
+  # Servicio phpMyAdmin (Opcional - para desarrollo)
+  # ===================================================
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: sglab_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: root_password_123
+    depends_on:
+      - db
+    networks:
+      - sglab_network
+
+# =====================================================
+# Volúmenes
+# =====================================================
+volumes:
+  mysql_data:
+    driver: local
+
+# =====================================================
+# Redes
+# =====================================================
+networks:
+  sglab_network:
+    driver: bridge

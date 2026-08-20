@@ -1,0 +1,140 @@
+/* Estilos globales */
+body {
+    background-color: #A0C0E0; /* Un azul suave similar al de la imagen */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Asegura que no haya márgenes extra */
+}
+
+/* Estilos para el encabezado de la página */
+.page-header {
+    background-color: rgba(192, 192, 192, 0.7); /* Gris claro semitransparente para el encabezado */
+    padding: 10px 0;
+    margin-bottom: 25px; /* Espacio debajo del encabezado para separar del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.page-header h1 {
+    font-size: 2em;
+    color: #333; /* Texto oscuro para el título */
+}
+
+.page-title-text {
+    font-weight: bold; /* Hacer el título del encabezado en negrita */
+}
+
+/* Estilo para el botón Volver */
+.custom-back-btn {
+    background-color: #D0D0D0; /* Gris un poco más oscuro */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #A0A0A0; /* Borde suave */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 8px 15px; /* Padding ajustado */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    margin-left: 15px; /* Espacio desde el borde izquierdo */
+    min-width: 80px; /* Ancho mínimo para que no se vea muy pequeño */
+}
+
+.custom-back-btn:hover {
+    background-color: #C0C0C0;
+    border-color: #909090;
+    color: #333;
+}
+
+/* Contenedor principal para los filtros y el área de resultados */
+.fluid-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    width: 100%; /* Ancho en pantallas pequeñas */
+    max-width: 95%; /* Ancho máximo para pantallas más grandes */
+    display: flex; /* Usamos flexbox para organizar los elementos internos */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+}
+
+/* Fila de filtros con Flexbox para distribución horizontal */
+.filters-row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea en pantallas pequeñas */
+    justify-content: center; /* Centra los filtros horizontalmente */
+    gap: 15px; /* Espacio entre los elementos de filtro */
+    width: 100%; /* Ocupa todo el ancho de su contenedor */
+    margin-bottom: 20px; /* Espacio debajo de la fila de filtros */
+}
+
+/* Estilos personalizados para los select de filtro */
+.custom-filter-select {
+    background-color: #E0E0E0; /* Gris claro para el fondo */
+    border: 1px solid #B0B0B0; /* Borde más suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 8px 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    appearance: none; /* Elimina la flecha predeterminada */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%204%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M2%200L0%202h4zm0%205L0%203h4z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+    min-width: 120px; /* Ancho mínimo para cada select/input de filtro */
+    flex: 1; /* Permite que los elementos crezcan y se encojan en la fila flex */
+    max-width: 180px; /* Ancho máximo para que no sean demasiado grandes en desktop */
+}
+
+/* Estilos personalizados para el input de fecha-hora */
+.custom-filter-input {
+    background-color: #E0E0E0;
+    border: 1px solid #B0B0B0;
+    border-radius: 10px;
+    padding: 8px 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    flex: 1;
+    max-width: 270px;
+}
+
+/* Área donde se mostrarán los resultados (tabla, lista, etc.) */
+.results-area {
+    background-color: #E0E0E0; /* Fondo gris claro similar a los inputs */
+    border: 1px solid #B0B0B0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ocupa el 100% del ancho del main-content-container */
+    min-height: 250px; /* Altura mínima para el área de resultados */
+    display: flex; /* Para centrar el texto provisional */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Estilos para la tabla de resultados (si la usas) */
+.custom-results-table {
+    margin-bottom: 0; /* Elimina margen inferior extra si el table-responsive lo añade */
+}
+.custom-results-table th,
+.custom-results-table td {
+    border-color: #C0C0C0; /* Color de borde para celdas */
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 575.98px) { /* Extra small devices (phones, 576px and down) */
+    .filters-row {
+        flex-direction: column; /* Apila los filtros verticalmente en pantallas muy pequeñas */
+        align-items: center; /* Centra los filtros apilados */
+    }
+    .custom-filter-select,
+    .custom-filter-input {
+        width: 100%; /* Los filtros ocupan todo el ancho disponible */
+        max-width: 250px; /* Pero limitan su ancho máximo */
+    }
+}
+
+.footer-logo {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen del footer */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+

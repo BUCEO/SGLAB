@@ -1,0 +1,109 @@
+body {
+    background-color: #A0C0E0; /* Color de fondo azul claro, similar a la imagen */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Estilos para el encabezado de la página */
+.page-header {
+    background-color: rgba(192, 192, 192, 0.7); /* Gris claro semitransparente para el encabezado */
+    padding: 10px 0;
+    margin-bottom: 30px; /* Espacio debajo del encabezado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.page-header h1 {
+    font-size: 2em;
+    color: #333; /* Texto oscuro para el título */
+}
+
+/* Contenedor principal del formulario de login */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    padding: 40px;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    width: 90%; /* Ancho en pantallas pequeñas */
+    max-width: 380px; /* Ancho máximo para pantallas más grandes */
+    display: flex; /* Usamos flexbox para centrar los elementos verticalmente dentro del contenedor */
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    align-items: center; /* Centramos horizontalmente los elementos */
+}
+
+/* Estilo del icono de persona */
+.login-icon {
+    font-size: 5em; /* Tamaño grande para el icono */
+    color: #333; /* Color oscuro */
+    margin-bottom: 20px; /* Espacio debajo del icono */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra para el icono */
+}
+
+/* Estilos de la etiqueta "Cédula" */
+.login-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+/* Estilos personalizados para el combobox (select) */
+.custom-select {
+    background-color: #E0E0E0; /* Gris claro para el fondo */
+    border: 1px solid #B0B0B0; /* Borde más suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 8px 15px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna para efecto de hundimiento */
+    appearance: none; /* Elimina la flecha predeterminada del select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%204%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M2%200L0%202h4zm0%205L0%203h4z%22%2F%3E%3C%2Fsvg%3E'); /* Flecha personalizada */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+    width: 100%; /* Ocupa el 100% del ancho de su contenedor */
+}
+
+/* Estilos personalizados para el botón "Entrar" */
+.custom-login-btn {
+    background-color: #D0D0D0; /* Gris un poco más oscuro para el botón */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #A0A0A0; /* Borde suave */
+    border-radius: 20px; /* Bordes redondeados como en la imagen */
+    padding: 10px 30px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ocupa el 100% del ancho de su contenedor */
+    max-width: 200px; /* Ancho máximo para el botón */
+}
+
+.custom-submit-btn:hover {
+    background-color: #3973e0; /* Gris más claro al pasar el ratón */
+    border-color: #909090;
+}
+
+/* Estilos para la imagen del footer */
+.footer-logo {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen del footer */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.custom-back-btn {
+    background-color: #D0D0D0; /* Gris un poco más oscuro */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #A0A0A0; /* Borde suave */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 8px 15px; /* Padding ajustado */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    text-decoration: none;
+    margin-left: 15px; /* Espacio desde el borde izquierdo */
+    min-width: 80px; /* Ancho mínimo para que no se vea muy pequeño */
+}
+
+.custom-back-btn:hover {
+    background-color: #C0C0C0;
+    border-color: #909090;
+    color: #333;
+}

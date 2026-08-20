@@ -1,0 +1,39 @@
+body {
+    background-color: #A0C0E0; /* Color de fondo azul claro, similar a la imagen */
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el encabezado */
+}
+
+header h1 {
+    font-size: 2.5em; /* Tamaño de fuente para el título */
+    color: white; /* Color del texto del título */
+}
+
+/* Estilos personalizados para el botón de Entrar */
+.custom-btn {
+    background-color: #AFEEEE; /* Color turquesa claro para el botón */
+    color: black; /* Color de texto negro para el botón */
+    border: 1px solid #80c0c0; /* Borde suave para el botón */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 15px 40px; /* Tamaño del padding del botón */
+    font-size: 1.5em; /* Tamaño de fuente del botón */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+.custom-btn:hover {
+    background-color: #3973e0; /* Gris más claro al pasar el ratón */
+    border-color: #909090;
+}
+
+
+/* Estilos para la imagen del footer */
+.footer-logo {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen del footer */
+    height: auto; /* Mantiene la proporción de la imagen */
+}

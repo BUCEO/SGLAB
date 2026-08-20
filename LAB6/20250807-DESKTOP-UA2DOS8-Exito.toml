@@ -1,0 +1,26 @@
+﻿[info_general]
+fecha = "2025/08/07 (09:31)"
+nombre_pc = "DESKTOP-UA2DOS8"
+estado_conexion = "Exito"
+
+[sistema_operativo]
+nombre = "Microsoft Windows 10 Home"
+version = "10.0.19045"
+
+[red]
+ip = "172.20.112.1"
+mascara = "20"
+default_gateway = "10.36.144.2 192.168.2.1"
+
+[hardware]
+cpu = "Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz"
+ram_gb = 7.88
+disco_c_gb = 446.36
+
+[ssh]
+clave_publica = "Directorio .ssh creado Generando nueva clave SSH... Generating public/private rsa key pair. Your identification has been saved in C:\Users\Juan\Desktop\.ssh\id_rsa Your public key has been saved in C:\Users\Juan\Desktop\.ssh\id_rsa.pub The key fingerprint is: SHA256:cth6Ps9qKUI5C12v9Sgnhga9GR+IFEzdBqyWoxt0Gbk Juan@DESKTOP-UA2DOS8 The key's randomart image is: +---[RSA 2048]----+ | o.ooo           | |  ooo o          | |   ++.           | | .*E  .o         | |.+.= +o.S        | |o + O .+o        | | o + O.+.+       | |.   B Bo*..      | |   . o *o+o      | +----[SHA256]-----+ Clave SSH generada exitosamente ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDTIw+HGeyURbv974TeboCqCrCKI5dhCyVn8cMEQAOdfjOxUhheA6fgKa0uTnjGUBA3ksJECV4jbh0iEIUhkqQ7S+c/UbMga1sY4Q1XDQ6k4sHRdFPFvqZHCp/uj8cGsLidc9anxUPUGRUGiQ3qPeY8Wn6Db6MzBXL67pprRDkf4yDiVa6eIn1fx847ZlSWx98QLuP1WDUOyEXkiOVkiof8n0brDinZmxSZQHOzPp1DProNOa7hV9lL32mDlGwhXQcz5sWnlxacs5ImFYDEeW4JmyZMP+i5w9Dwd9dgjBtpkYjURuEHNlZO5hdHur+VNg93VXkiJntE1NMUTRguDlhd Juan@DESKTOP-UA2DOS8"
+usuario = "Juan"
+ruta_clave = "C:\Users\Juan\Desktop\.ssh\id_rsa.pub"
+
+[usuario_responsable]
+cedula = "12345678"

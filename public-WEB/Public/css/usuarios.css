@@ -1,0 +1,434 @@
+/* usuarios.css - Estilos específicos para la gestión de usuarios */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-exito: #27ae60;
+    --color-peligro: #e74c3c;
+    --color-advertencia: #f39c12;
+    --color-info: #17a2b8;
+    --color-fondo: #f8f9fa;
+    --color-texto: #2c3e50;
+    --color-borde: #dee2e6;
+    --color-admin: #c0392b;
+    --color-docente: #17a2b8;
+    --color-estudiante: #0d6efd;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto);
+}
+
+.usuarios-container {
+    min-height: calc(100vh - 200px);
+    padding: 2rem 0;
+}
+
+/* Header de la página */
+.usuarios-header {
+    background: linear-gradient(135deg, var(--color-primario), #1a2530);
+    color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estadísticas Cards - CORREGIDO */
+.estadistica-card {
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+
+.estadistica-card .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.estadistica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.estadistica-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.estadistica-card.total i {
+    color: var(--color-primario);
+}
+
+.estadistica-card.administradores i {
+    color: var(--color-admin);
+}
+
+.estadistica-card.activos i {
+    color: var(--color-exito);
+}
+
+.estadistica-card.inactivos i {
+    color: var(--color-advertencia);
+}
+
+.estadistica-card h5 {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.estadistica-card h2 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+.estadistica-card .btn {
+    margin-top: 0.5rem;
+}
+
+/* Asegurar que las cards tengan la misma altura */
+.row.mb-4 .col-md-3 {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.row.mb-4 .col-md-3 .card {
+    width: 100%;
+}
+
+/* Tabla de usuarios */
+#tablaUsuarios {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#tablaUsuarios th {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-top: 2px solid var(--color-primario);
+    border-bottom: 2px solid var(--color-borde);
+    font-weight: 600;
+    color: var(--color-texto);
+    padding: 1rem 0.75rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#tablaUsuarios td {
+    padding: 1rem 0.75rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#tablaUsuarios tbody tr {
+    transition: all 0.2s ease;
+}
+
+#tablaUsuarios tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+    transform: scale(1.01);
+}
+
+/* Badges de rol - MEJORADO */
+.badge.bg-danger {
+    background: linear-gradient(135deg, #dc3545, #c82333) !important;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.badge.bg-info {
+    background: linear-gradient(135deg, #17a2b8, #138496) !important;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.badge.bg-primary {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca) !important;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.badge.bg-success {
+    background: linear-gradient(135deg, #198754, #146c43) !important;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.badge.bg-secondary {
+    background: linear-gradient(135deg, #6c757d, #5a6268) !important;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Formularios de usuario */
+.form-usuario .form-label {
+    font-weight: 500;
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+
+.form-usuario .form-control,
+.form-usuario .form-select {
+    border-radius: 8px;
+    border: 2px solid var(--color-borde);
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.form-usuario .form-control:focus,
+.form-usuario .form-select:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Botones de acción en tabla */
+.btn-sm {
+    border-radius: 6px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.875rem;
+    margin: 0 2px;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-info:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline-warning {
+    color: #f39c12;
+    border-color: #f39c12;
+}
+
+.btn-outline-warning:hover {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-danger {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.btn-outline-danger:hover {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-success:hover {
+    transform: translateY(-2px);
+}
+
+/* Mejoras para los modales */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    border-radius: 15px 15px 0 0;
+    padding: 1.5rem;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 2rem 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--color-borde);
+    padding: 1rem 1.5rem;
+}
+
+/* Estados vacíos */
+#sinUsuarios {
+    padding: 3rem 1rem;
+}
+
+/* Mejoras para cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid var(--color-primario);
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Búsqueda y filtros */
+.input-group {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.input-group .form-control {
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.input-group-text {
+    background-color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.form-select {
+    border: 2px solid var(--color-borde);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-select:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Alertas flotantes */
+.alert.position-fixed {
+    z-index: 9999;
+    min-width: 300px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .estadistica-card {
+        margin-bottom: 1rem;
+    }
+    
+    .estadistica-card i {
+        font-size: 2rem;
+    }
+    
+    .estadistica-card h2 {
+        font-size: 2rem;
+    }
+    
+    #tablaUsuarios {
+        font-size: 0.85rem;
+    }
+    
+    #tablaUsuarios th,
+    #tablaUsuarios td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .btn-sm {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .usuarios-container {
+        padding: 1rem 0;
+    }
+    
+    .estadistica-card .card-body {
+        padding: 1.5rem 1rem;
+    }
+    
+    .estadistica-card h5 {
+        font-size: 0.85rem;
+    }
+    
+    .estadistica-card h2 {
+        font-size: 1.75rem;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .btn-sm {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.estadistica-card {
+    animation: fadeInUp 0.5s ease;
+}
+
+#tablaUsuarios tbody tr {
+    animation: slideIn 0.3s ease;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+    margin-top: 3rem;
+}
+
+.footer-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+}

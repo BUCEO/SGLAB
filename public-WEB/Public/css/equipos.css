@@ -1,0 +1,176 @@
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-exito: #27ae60;
+    --color-peligro: #e74c3c;
+    --color-advertencia: #f39c12;
+    --color-info: #17a2b8;
+    --color-fondo: #f8f9fa;
+    --color-texto: #2c3e50;
+    --color-borde: #dee2e6;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto);
+}
+
+/* Navbar personalizado */
+.navbar {
+    background-color: var(--color-primario) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards de estadísticas */
+.stat-card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.stat-card i {
+    opacity: 0.9;
+}
+
+/* Tarjetas de equipos */
+.equipo-card {
+    border-width: 2px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.equipo-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.equipo-especificaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.especificacion-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.especificacion-item i {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+.especificacion-item div {
+    flex: 1;
+}
+
+/* Botones de acción */
+.btn {
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Modal headers */
+.modal-header {
+    border-radius: 15px 15px 0 0;
+}
+
+/* Formularios */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid var(--color-borde);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-primario);
+    color: white;
+}
+
+.footer-logo {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.equipo-card {
+    animation: fadeIn 0.6s ease;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .especificacion-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .especificacion-item i {
+        font-size: 1.25rem;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Badges */
+.badge {
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+/* Loading states */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Utility classes */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Hover effects */
+.equipo-card:hover .card-title {
+    color: var(--color-secundario);
+}
+
+/* Gradient backgrounds for stats */
+.bg-primary { background: linear-gradient(135deg, #3498db, #2980b9) !important; }
+.bg-success { background: linear-gradient(135deg, #27ae60, #229954) !important; }
+.bg-info { background: linear-gradient(135deg, #17a2b8, #138496) !important; }
+.bg-warning { background: linear-gradient(135deg, #f39c12, #e67e22) !important; }

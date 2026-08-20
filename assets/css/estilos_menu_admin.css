@@ -1,0 +1,70 @@
+/* Estilos globales */
+body {
+    background-color: #A0C0E0; /* Un azul suave similar al de la imagen */
+    font-family: Arial, sans-serif;
+    margin: 0; /* Asegura que no haya márgenes extra */
+}
+
+/* Estilos para el encabezado de la página */
+.page-header {
+    background-color: rgba(192, 192, 192, 0.7); /* Gris claro semitransparente para el encabezado */
+    padding: 10px 0;
+    margin-bottom: 30px; /* Espacio debajo del encabezado para separar del contenido */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.page-header h1 {
+    font-size: 2em;
+    color: #333; /* Texto oscuro para el título */
+}
+
+/* Contenedor principal de los botones del menú */
+.menu-container {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente para el contenedor del menú */
+    padding: 30px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    width: 90%; /* Ancho en pantallas pequeñas */
+    max-width: 350px; /* Ancho máximo para pantallas más grandes */
+    /* Usamos flexbox aquí para asegurar que el d-grid gap-3 se centre dentro */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los botones si el d-grid es más pequeño */
+    align-items: center; /* Centra verticalmente los botones si el d-grid es más pequeño */
+}
+
+/* Estilos personalizados para los botones del menú */
+.custom-menu-btn {
+    background-color: #D0D0D0; /* Gris un poco más oscuro para los botones */
+    color: #333; /* Texto oscuro */
+    border: 1px solid #A0A0A0; /* Borde suave */
+    border-radius: 20px; /* Bordes redondeados como en la imagen */
+    padding: 12px 25px; /* Padding para hacer los botones más grandes */
+    font-size: 1.2em; /* Tamaño de fuente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición suave */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    width: 100%; /* Asegura que los botones ocupen el 100% del ancho disponible en su contenedor */
+}
+
+.custom-menu-btn:hover {
+    background-color: #3973e0; /* Gris más claro al pasar el ratón */
+    border-color: #909090;
+    color: #333; /* Asegura que el color del texto no cambie en hover si el btn-primary lo cambia */
+}
+
+/* Estilo específico para el botón "Salir" si quieres que se vea un poco diferente */
+.exit-btn {
+    margin-top: 20px; /* Agrega más espacio por encima del botón Salir */
+    /* Puedes darle un color diferente si lo deseas, por ejemplo: */
+    /* background-color: #FF7070; */
+    /* border-color: #D04040; */
+}
+
+.exit-btn:hover {
+    /* background-color: #FF9090; */
+}
+
+.footer-logo {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen del footer */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
